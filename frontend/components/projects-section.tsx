@@ -15,7 +15,9 @@ export default function ProjectsSection() {
     description: "Smart drug dispenser powered by ML and IoT for automated medication management.",
     technologies: ["Python", "Arduino", "Raspberry Pi", "Flask", "ML"],
     category: ["iot","ai-ml","web"],
-    image: "/images/jeevika.jpeg",
+    image: "portfolio/images/jeevika.jpeg",
+    github: "https://github.com/ikkiocean/jeevika",
+    demo: "https://jeevika-demo.com",
   },
   {
     id: "2",
@@ -23,7 +25,9 @@ export default function ProjectsSection() {
     description: "Natural language to SQL query converter using RAG architecture for database interactions.",
     technologies: ["Python", "LangChain", "OpenAI", "PostgreSQL"],
     category: ["ai-ml","web"],
-    image: "/images/sql-ai.jpeg",
+    image: "portfolio/images/sql-ai.jpeg",
+    github: "https://github.com/ikkiocean/SQL-AI",
+    demo: "https://sql-ai-demo.com",
   },
   {
     id: "3",
@@ -31,7 +35,9 @@ export default function ProjectsSection() {
     description: "IoT-based citizen grievance platform for efficient public service management.",
     technologies: ["React", "Node.js", "Arduino", "MongoDB", "IoT"],
     category: ["iot","web"],
-    image: "/images/sahkarya.jpeg",
+    image: "portfolio/images/sahkarya.jpeg",
+    github: "https://github.com/sahkarya/sahkarya",
+    demo: "https://sahkarya-demo.com",
   },
   {
     id: "4",
@@ -39,7 +45,9 @@ export default function ProjectsSection() {
     description: "Semantic search engine for fashion e-commerce improving product discovery beyond keywords.",
     technologies: ["Python", "Jupyter", "NLP", "Vector Search"],
     category: ["ai-ml"],
-    image: "/images/fashion-search.jpeg",
+    image: "portfolio/images/fashion-search.jpeg",
+    github: "https://github.com/ikkiocean/Fashion_Search",
+    demo: "https://fashion-search-demo.com",
   },
   {
     id: "5",
@@ -47,7 +55,9 @@ export default function ProjectsSection() {
     description: "Feature-rich Discord bot for anime, image editing, Reddit, and entertainment features.",
     technologies: ["Python", "Discord.py", "APIs"],
     category: ["web", "game"],
-    image: "/images/stella-discord-bot.jpeg",
+    image: "portfolio/images/stella-discord-bot.jpeg",
+    github: "https://github.com/ikkiocean/stella_discord_bot",
+    demo: "https://stella-discord-demo.com",
   },
   {
     id: "6",
@@ -55,7 +65,9 @@ export default function ProjectsSection() {
     description: "Arcade puzzle game using joystick-based ball navigation with C++ implementation.",
     technologies: ["C++", "Game Development", "Arduino"],
     category: ["game","iot"],
-    image: "/images/labyrinth-game.jpeg",
+    image: "portfolio/images/labyrinth-game.jpeg",
+    github: "https://github.com/ikkiocean/labyrinth_game",
+    demo: "https://labyrinth-game-demo.com",
   },
   {
     id: "7",
@@ -63,7 +75,9 @@ export default function ProjectsSection() {
     description: "Smart assistive device for visually impaired individuals using sonar-equipped glove to detect obstacles and guide navigation.",
     technologies: ["Arduino", "Ultrasonic Sensor", "IoT", "C++"],
     category: ["iot"],
-    image: "/images/blinds-partner.jpeg",
+    image: "portfolio/images/blinds-partner.jpeg",
+    github: "https://github.com/ikkiocean/blinds-partner",
+    demo: "https://blinds-partner-demo.com",
   },
   {
     id: "8",
@@ -71,9 +85,9 @@ export default function ProjectsSection() {
     description: "Smart bird feeder system using IoT and AI to detect bird species, manage food dispensing, and capture images.",
     technologies: ["Python", "OpenCV", "ESP32", "IoT"],
     category: ["iot"],
-    image: "/images/birdfeeder.jpeg",
-
-
+    image: "portfolio/images/birdfeeder.jpeg",
+    github: "https://github.com/ikkiocean/birdfeeder",
+    demo: "https://birdfeeder-demo.com",
   },
 ]
 
@@ -159,13 +173,32 @@ const filteredProjects =
                 </div>
 
                 <div className="flex gap-3">
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
+                  <Button
+                    asChild
+                    size="sm"
+                    variant="outline"
+                    className="flex-1"
+                  >
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      Code
+                    </a>
                   </Button>
-                  <Button size="sm" className="flex-1">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Demo
+                  <Button asChild size="sm" className="flex-1">
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Demo
+                    </a>
                   </Button>
                 </div>
               </div>

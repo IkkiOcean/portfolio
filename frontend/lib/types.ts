@@ -5,6 +5,9 @@ export interface Project {
   technologies: string[]
   category: string[]
   image?: string
+  github?: string
+  demo?: string
+
 }
 
 export interface Certificate {
@@ -12,6 +15,7 @@ export interface Certificate {
   title: string
   issuer: string
   date: string
+  link?: string
 }
 
 export interface Experience {

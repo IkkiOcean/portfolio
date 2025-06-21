@@ -1,4 +1,4 @@
-import { Briefcase, Trophy, Users } from "lucide-react"
+import { Briefcase, Trophy, GitPullRequest } from "lucide-react"
 import type { Experience } from "@/lib/types"
 
 export default function ExperienceSection() {
@@ -90,15 +90,15 @@ export default function ExperienceSection() {
           </div>
 
           <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-lg">
-            <Users className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">40k+</div>
-            <div className="text-gray-600 dark:text-gray-400">Contributors</div>
+            <GitPullRequest className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+            <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">1000+</div>
+            <div className="text-gray-600 dark:text-gray-400">Contributions</div>
           </div>
 
           <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-lg">
             <Briefcase className="w-12 h-12 text-green-600 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">2+</div>
-            <div className="text-gray-600 dark:text-gray-400">Years Experience</div>
+            <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">5+</div>
+            <div className="text-gray-600 dark:text-gray-400">Years Of Programming</div>
           </div>
         </div>
       </div>
