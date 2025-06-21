@@ -1,4 +1,4 @@
-name: Deploy Next.js frontend to GitHub Pages
+name: Deploy portfolio to GitHub Pages
 
 on:
   push:
@@ -65,13 +65,12 @@ jobs:
       - name: Build and Export Next.js site
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} next build
-          ${{ steps.detect-package-manager.outputs.runner }} next export
         working-directory: frontend
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: frontend/out
+          path: ./frontend/dist
 
   deploy:
     environment:
