@@ -65,7 +65,6 @@ jobs:
       - name: Build and Export Next.js site
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} next build
-          ${{ steps.detect-package-manager.outputs.runner }} next export
         working-directory: frontend
 
       - name: Upload artifact
