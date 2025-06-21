@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/frontend',
+  distDir: 'dist',
   images: {
     unoptimized: true,
   },
@@ -10,9 +10,6 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
   },
 }
 
