@@ -62,7 +62,7 @@ jobs:
         working-directory: frontend
       - name: Build and Export Next.js site
         run: |
-          npm next build
+          npm run build
         working-directory: frontend
 
       - name: Upload artifact
