@@ -11,6 +11,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  basePath: '/portfolio', 
+  assetPrefix: '/portfolio',
 }
 
 export default nextConfig
