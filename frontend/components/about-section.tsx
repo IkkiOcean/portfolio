@@ -14,7 +14,7 @@ export default function AboutSection() {
             <div className="relative">
               <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center">
                 <div className="w-72 h-72 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center">
-                  <img src="portfolio/profile.jpeg" className="text-6xl rounded-full font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  <img src="./profile.jpeg" className="text-6xl rounded-full font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     
                   </img>
                 </div>
