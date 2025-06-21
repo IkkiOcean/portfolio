@@ -12,7 +12,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   basePath: '/portfolio', 
-  assetPrefix: '/portfolio',
+  assetPrefix: '/portfolio/',
 }
 
 export default nextConfig
