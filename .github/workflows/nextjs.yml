@@ -1,4 +1,4 @@
-name: Deploy Next.js portfolio to GitHub Pages
+name: Deploy Next.js frontend to GitHub Pages
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
 
       - name: Detect package manager
         id: detect-package-manager
-        working-directory: portfolio
+        working-directory: frontend
         run: |
           if [ -f "yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
@@ -53,25 +53,25 @@ jobs:
       - name: Restore cache
         uses: actions/cache@v4
         with:
-          path: portfolio/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('portfolio/**/package-lock.json', 'portfolio/**/yarn.lock') }}-${{ hashFiles('portfolio/**/*.[jt]s', 'portfolio/**/*.[jt]sx') }}
+          path: frontend/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('frontend/**/package-lock.json', 'frontend/**/yarn.lock') }}-${{ hashFiles('frontend/**/*.[jt]s', 'frontend/**/*.[jt]sx') }}
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('portfolio/**/package-lock.json', 'portfolio/**/yarn.lock') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('frontend/**/package-lock.json', 'frontend/**/yarn.lock') }}-
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-        working-directory: portfolio
+        working-directory: frontend
 
       - name: Build and Export Next.js site
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} next build
           ${{ steps.detect-package-manager.outputs.runner }} next export
-        working-directory: portfolio
+        working-directory: frontend
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: portfolio/out
+          path: frontend/out
 
   deploy:
     environment:
