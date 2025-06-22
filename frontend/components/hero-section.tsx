@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react"
 import { ChevronDown, Download, Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
-// import ParticleEffect from "./particle-effect"
-// import FloatingElements from "./floating-elements"
+import ParticleEffect from "./particle-effect"
+import FloatingElements from "./floating-elements"
 
 export default function HeroSection() {
   const [text, setText] = useState("")
-  const fullText = "Developer. ML Enthusiast. AI Innovator."
+  const fullText = "Software Developer | ML Enthusiast | AI Innovator"
 
   useEffect(() => {
     let index = 0
@@ -27,8 +27,8 @@ export default function HeroSection() {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Enhanced Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900">
-        {/* {/* <ParticleEffect /> */}
-        {/* <FloatingElements />  */}
+       <ParticleEffect /> 
+        <FloatingElements /> 
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         {/* Enhanced Floating Elements */}
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>

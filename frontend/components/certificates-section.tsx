@@ -59,7 +59,7 @@ export default function CertificatesSection() {
           {certificates.map((cert, index) => (
             <div
               key={cert.id}
-              className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-blue-600"
+              className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden group transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start space-x-4">

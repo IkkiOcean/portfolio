@@ -4,10 +4,16 @@ export interface Project {
   description: string
   technologies: string[]
   category: string[]
-  image?: string
+  image?: string[]
+  video?: string
   github?: string
   demo?: string
-
+  details?: string | {
+  features?: string[]
+  iot?: string[]
+  techHighlights?: string[]
+  useCases?: string[]
+  }
 }
 
 export interface Certificate {
