@@ -16,7 +16,7 @@ export default function AboutSection() {
               <div className="mx-auto p-4 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center w-64 h-64 shadow-lg transition-transform transform hover:scale-105 md:w-80 md:h-80">
                 <div className="bg-white dark:bg-gray-900 rounded-full overflow-hidden w-full h-full flex items-center justify-center">
                   <Image
-                    src="/profile.jpeg"
+                    src="./profile.jpeg"
                     alt="Profile"
                     width={256}
                     height={256}
