@@ -33,7 +33,7 @@ export default function ExperienceSection() {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900">
+    <section id="experience" className="py-10 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Experience & Achievements</h2>
@@ -51,7 +51,7 @@ export default function ExperienceSection() {
                 <div className="absolute left-6 w-4 h-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full border-4 border-white dark:border-gray-900"></div>
 
                 {/* Content */}
-                <div className="ml-20 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="ml-20 bg-white dark:bg-gray-800 p-6 border-l-4 border-blue-600 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{exp.title}</h3>

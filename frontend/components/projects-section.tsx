@@ -86,7 +86,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden"
+      className="py-10 bg-white dark:bg-gray-900 relative overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -197,7 +197,7 @@ export default function ProjectsSection() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
+                        className="px-3 py-2 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-medium border border-blue-200 dark:border-blue-800"
                       >
                         {tech}
                       </span>

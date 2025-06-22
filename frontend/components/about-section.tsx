@@ -1,9 +1,11 @@
 'use client'
 import { Code, Brain, Zap } from "lucide-react"
 import Image from "next/image"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 export default function AboutSection() {
+  const { ref: sectionRef, isVisible } = useScrollAnimation()
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
+    <section id="about"  ref={sectionRef} className="py-10 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
@@ -11,7 +13,9 @@ export default function AboutSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <div
+            className={`transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
+          >
             <div className="relative">
               <div className="mx-auto p-4 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center w-64 h-64 shadow-lg transition-transform transform hover:scale-105 md:w-80 md:h-80">
                 <div className="bg-white dark:bg-gray-900 rounded-full overflow-hidden w-full h-full flex items-center justify-center">
@@ -25,6 +29,9 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
+            {/* Floating rings */}
+              <div className="absolute inset-0 rounded-full border-2 border-blue-400 opacity-20 animate-ping"></div>
+              <div className="absolute inset-4 rounded-full border-2 border-purple-400 opacity-20 animate-ping animation-delay-1000"></div>
           </div>
 
           <div className="space-y-6">

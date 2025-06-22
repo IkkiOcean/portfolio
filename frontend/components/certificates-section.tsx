@@ -48,10 +48,10 @@ export default function CertificatesSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section className="py-10 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Certificates & Achievements</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Certificates</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
         </div>
 
@@ -59,7 +59,7 @@ export default function CertificatesSection() {
           {certificates.map((cert, index) => (
             <div
               key={cert.id}
-              className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden group transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700"
+              className="bg-white border-l-4 border-blue-600 dark:bg-gray-700 p-6 dark:border-l-4 dark:border-blue-600 rounded-lg shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden group transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start space-x-4">

@@ -6,13 +6,14 @@ import ProjectsSection from "@/components/projects-section"
 import CertificatesSection from "@/components/certificates-section"
 import ExperienceSection from "@/components/experience-section"
 import ContactSection from "@/components/contact-section"
-
+import TimelineSection from "@/components/timeline-section"
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <TimelineSection />
       <SkillsSection />
       <ExperienceSection />
       <ProjectsSection />

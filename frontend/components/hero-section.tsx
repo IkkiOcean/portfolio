@@ -5,7 +5,6 @@ import { ChevronDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ParticleEffect from "./particle-effect";
 import FloatingElements from "./floating-elements";
-
 export default function HeroSection() {
   const [text, setText] = useState("");
   const fullText = "Software Developer | ML Enthusiast | AI Innovator";
@@ -32,6 +31,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900">
         <ParticleEffect />
         <FloatingElements />
+        {/* Subtle Grid Pattern */}
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         {/* Enhanced Floating Elements */}
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
