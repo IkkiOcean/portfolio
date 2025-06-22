@@ -1,34 +1,37 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { ChevronDown, Download, Github, Linkedin, Mail } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import ParticleEffect from "./particle-effect"
-import FloatingElements from "./floating-elements"
+import { useState, useEffect } from "react";
+import { ChevronDown, Download, Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import ParticleEffect from "./particle-effect";
+import FloatingElements from "./floating-elements";
 
 export default function HeroSection() {
-  const [text, setText] = useState("")
-  const fullText = "Software Developer | ML Enthusiast | AI Innovator"
+  const [text, setText] = useState("");
+  const fullText = "Software Developer | ML Enthusiast | AI Innovator";
 
   useEffect(() => {
-    let index = 0
+    let index = 0;
     const timer = setInterval(() => {
-      setText(fullText.slice(0, index))
-      index++
+      setText(fullText.slice(0, index));
+      index++;
       if (index > fullText.length) {
-        clearInterval(timer)
+        clearInterval(timer);
       }
-    }, 100)
+    }, 100);
 
-    return () => clearInterval(timer)
-  }, [])
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Enhanced Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900">
-       <ParticleEffect /> 
-        <FloatingElements /> 
+        <ParticleEffect />
+        <FloatingElements />
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         {/* Enhanced Floating Elements */}
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -50,8 +53,9 @@ export default function HeroSection() {
             <span className="animate-pulse">|</span>
           </div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
-            Passionate about building intelligent systems and creating seamless digital experiences. Currently pursuing
-            B.Tech at IIMT College of Engineering, AKTU.
+            Passionate about building intelligent systems and creating seamless
+            digital experiences. Currently pursuing B.Tech at IIMT College of
+            Engineering, AKTU.
           </p>
         </div>
 
@@ -62,14 +66,16 @@ export default function HeroSection() {
           >
             <a href="#projects">View Projects</a>
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="transform hover:scale-105 transition-all duration-300 hover:shadow-lg"
-          >
-            <Download className="mr-2 h-4 w-4" />
-            Download Resume
-          </Button>
+          <a href="./vivek_prakash_resume.pdf" download>
+            <Button
+              size="lg"
+              variant="outline"
+              className="transform hover:scale-105 transition-all duration-300 hover:shadow-lg"
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Download Resume
+            </Button>
+          </a>
           <Button
             size="lg"
             variant="outline"
@@ -105,5 +111,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
